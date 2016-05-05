@@ -16,14 +16,14 @@ print "importing shapefile"
 
 psql_env = dict(PGPASSWORD=config.get('database', 'password'))
 
-# db.query("DROP TABLE IF EXISTS "+config.get('summary_stats', 'shp_table_name'))
+db.query("DROP TABLE IF EXISTS "+config.get('summary_stats', 'shp_table_name'))
 
-# p1 = subprocess.Popen(['shp2pgsql', '-c', '-t', '2D', '-s', config.get('summary_stats', 'shp_file_srs'),
-#                        config.get('summary_stats', 'shp_file'), config.get('summary_stats', 'shp_table_name')], stdout=subprocess.PIPE)
-# p2 = subprocess.Popen(['/usr/bin/psql', '-p', '5432', config.get('database', 'dbname'), '-U',
-#                        config.get('database', 'user'), '-h', '127.0.0.1'], stdin=p1.stdout, stdout=subprocess.PIPE, env=psql_env)
-# p1.stdout.close()
-# output,err = p2.communicate()
+p1 = subprocess.Popen(['shp2pgsql', '-c', '-t', '2D', '-s', config.get('summary_stats', 'shp_file_srs'),
+                       config.get('summary_stats', 'shp_file'), config.get('summary_stats', 'shp_table_name')], stdout=subprocess.PIPE)
+p2 = subprocess.Popen(['/usr/bin/psql', '-p', '5432', config.get('database', 'dbname'), '-U',
+                       config.get('database', 'user'), '-h', '127.0.0.1'], stdin=p1.stdout, stdout=subprocess.PIPE, env=psql_env)
+p1.stdout.close()
+output,err = p2.communicate()
 
 db.query("ALTER TABLE "+config.get('summary_stats', 'shp_table_name')+" ADD column attributes TEXT")
 
