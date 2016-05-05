@@ -39,5 +39,6 @@ output,err = p2.communicate()
 db.query('CREATE INDEX dem_st_convexhull_idx ON '+config.get('summary_stats', 'raster_table_name')+' '
                                'USING gist ((st_convexhull(rast)) public.gist_geometry_ops_2d)')
 
-db.query('select raster.updtae_attributes($1, $2)', (config.get('summary_stats', 'shp_table_name'),
-                                                     config.get('summary_stats', 'raster_table_name')))
+print "updating attributes"
+db.query('select raster.updtae_attributes($1, $2)', (config.get('summary_stats', 'raster_table_name'),
+                                                     config.get('summary_stats', 'shp_table_name')))
