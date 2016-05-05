@@ -40,5 +40,12 @@ db.query('CREATE INDEX dem_st_convexhull_idx ON '+config.get('summary_stats', 'r
                                'USING gist ((st_convexhull(rast)) public.gist_geometry_ops_2d)')
 
 print "updating attributes"
-db.query('select raster.updtae_attributes($1, $2)', (config.get('summary_stats', 'raster_table_name'),
-                                                     config.get('summary_stats', 'shp_table_name')))
+q = db.query("SELECT count(*) as count_all from "+config.get('summary_stats', 'shp_table_name'))
+count_all = q.dictresult()[0]["count_all"]
+steps = count_all/500
+for s in range(0, steps):
+    db.query('select raster.updtae_attributes($1, $2, $3, $4)', (config.get('summary_stats', 'raster_table_name'),
+                                                         config.get('summary_stats', 'shp_table_name'),
+                                                                 500, s*500))
+    print("processed "+str((s * 500)))
+
