@@ -18,7 +18,7 @@ psql_env = dict(PGPASSWORD=config.get('database', 'password'))
 
 db.query("DROP TABLE IF EXISTS "+config.get('summary_stats', 'shp_table_name'))
 
-p1 = subprocess.Popen(['shp2pgsql', '-c', '-t', '2D', '-s', config.get('summary_stats', 'shp_file_srs'),
+p1 = subprocess.Popen(['/usr/bin/shp2pgsql', '-c', '-t', '2D', '-s', config.get('summary_stats', 'shp_file_srs'),
                        config.get('summary_stats', 'shp_file'), config.get('summary_stats', 'shp_table_name')], stdout=subprocess.PIPE)
 p2 = subprocess.Popen(['/usr/bin/psql', '-p', '5432', config.get('database', 'dbname'), '-U',
                        config.get('database', 'user'), '-h', '127.0.0.1'], stdin=p1.stdout, stdout=subprocess.PIPE, env=psql_env)
@@ -29,7 +29,7 @@ db.query("ALTER TABLE "+config.get('summary_stats', 'shp_table_name')+" ADD colu
 
 print "importing raster"
 db.query("DROP TABLE IF EXISTS "+config.get('summary_stats', 'raster_table_name'))
-p1 = subprocess.Popen(['raster2pgsql', '-d', '-s', config.get('summary_stats', 'raster_file_srs'), '-t', '50x50',  config.get('summary_stats', 'raster_file'),
+p1 = subprocess.Popen(['/usr/bin/raster2pgsql', '-d', '-s', config.get('summary_stats', 'raster_file_srs'), '-t', '50x50',  config.get('summary_stats', 'raster_file'),
                        config.get('summary_stats', 'raster_table_name')], stdout=subprocess.PIPE)
 p2 = subprocess.Popen(['/usr/bin/psql', '-p', '5432', config.get('database', 'dbname'), '-U', config.get('database', 'user'), '-h', '127.0.0.1'],
                       stdin=p1.stdout, stdout=subprocess.PIPE, env=psql_env)
