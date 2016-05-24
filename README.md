@@ -3,7 +3,7 @@ Research for approachs to automate the classification of remote sensing images. 
 Here are the ideas and the currently state of the application.
 
 ###Steps:
-* Segmentation Tuning.
+* [Segmentation Tuning](https://github.com/geosynergy/geobia/blob/master/README.md#L16)
 * Segmentation.
 * Extract Attributes
 * Machine Learning & Complex Networks.
