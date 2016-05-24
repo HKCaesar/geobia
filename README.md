@@ -48,3 +48,4 @@ Checking the [MADlib](http://madlib.incubator.apache.org/) with Random Forest</b
 ### Object Detection and Recognition
 
 ### More ideas
+- Bag-of-Visual-Words
