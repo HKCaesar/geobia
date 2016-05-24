@@ -37,15 +37,24 @@ The gdal-segment extract some information like sum, mean and standard deviation.
 Checking the [MADlib](http://madlib.incubator.apache.org/) with Random Forest</br>.
 **Ideas:**</br>
 - Check the confusion matrix before run the classifier algorithm, and if have confusions cluster it and create new classes. If have no confusion, run the algorithm, classify all the segments with the output query and after merge the new classes, so they finish as one class.
-- I like approaches as the [TWS](http://imagej.net/Trainable_Weka_Segmentation). Currently checking this and the [TBOT](https://github.com/rhiever/tpot) that works with [scikit-learn](http://scikit-learn.org/stable/).
+- I like approaches as the [TWS](http://imagej.net/Trainable_Weka_Segmentation). Currently checking this and the [TPOT](https://github.com/rhiever/tpot) that works with [scikit-learn](http://scikit-learn.org/stable/).
 
 ### UI
 
 ### Cloud Processing
 
-### Parallel Processing
+### Parallel/CUDA etc Processing
+
+cv tile (https://github.com/scottgs/cvtile)  opencv + gdal + cuda
+ipython parallel
 
 ### Object Detection and Recognition
+http://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_feature2d/py_table_of_contents_feature2d/py_table_of_contents_feature2d.html
 
+##Deep Learning
+lasagne.readthedocs.io/en/latest/
+
+UAV/ Raspberry Pi based openCV image classification
+https://pypi.python.org/pypi/cuav
 ### More ideas
 - Bag-of-Visual-Words
