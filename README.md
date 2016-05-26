@@ -59,3 +59,4 @@ UAV/ Raspberry Pi based openCV image classification
 https://pypi.python.org/pypi/cuav
 ### More ideas
 - Bag-of-Visual-Words
+- Changing some PostgreSQL security configuration for improving I/O
