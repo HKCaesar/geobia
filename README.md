@@ -47,6 +47,7 @@ Checking the [MADlib](http://madlib.incubator.apache.org/) with Random Forest</b
 
 cv tile (https://github.com/scottgs/cvtile)  opencv + gdal + cuda
 ipython parallel
+Docker containers (https://www.docker.com/what-docker)
 
 ### Object Detection and Recognition
 http://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_feature2d/py_table_of_contents_feature2d/py_table_of_contents_feature2d.html
