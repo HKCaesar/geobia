@@ -49,7 +49,11 @@ cv tile (https://github.com/scottgs/cvtile)  opencv + gdal + cuda</br>
 ipython parallel</br>
 Docker containers (https://www.docker.com/what-docker)</br>
 [pg_shard](https://www.citusdata.com/citus-products/pg-shard/pg-shard-quick-start-guide)
-
+- - -
+eg gdal-segment > cvtile paralllel CUDA processing
+and multiscale processing, and slicing up images into docker prcoesses maybe
+and ML maybe with madlib + HAWQ + AWS elastic stuff would seem really promising
+- - -
 ### Object Detection and Recognition
 http://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_feature2d/py_table_of_contents_feature2d/py_table_of_contents_feature2d.html
 
@@ -61,3 +65,4 @@ https://pypi.python.org/pypi/cuav
 ### More ideas
 - Bag-of-Visual-Words
 - Changing some PostgreSQL security configuration for improving I/O
+
