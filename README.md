@@ -65,4 +65,5 @@ https://pypi.python.org/pypi/cuav
 ### More ideas
 - Bag-of-Visual-Words
 - Changing some PostgreSQL security configuration for improving I/O
+- [Agent Based Image Analysis](https://sites.google.com/site/agentbasedimageanalysis/home)
 
