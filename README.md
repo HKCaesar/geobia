@@ -42,7 +42,7 @@ Checking the [MADlib](http://madlib.incubator.apache.org/) with Random Forest</b
 ### UI
 
 ### Cloud Processing
-AWS / IBM / GOOGLE / FREEBSD / vexxhost
+AWS / IBM / GOOGLE / FREEBSD / vexxhost - ex cloudera
 
 ### Parallel/CUDA etc Processing
 
