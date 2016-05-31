@@ -43,6 +43,7 @@ Checking the [MADlib](http://madlib.incubator.apache.org/) with Random Forest</b
 
 ### Cloud Processing
 AWS / IBM / GOOGLE / FREEBSD / vexxhost - ex cloudera
+[HAWQ](http://hawq.incubator.apache.org/)
 
 ### Parallel/CUDA etc Processing
 
