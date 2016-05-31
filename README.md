@@ -58,7 +58,7 @@ and ML maybe with madlib + HAWQ + AWS elastic stuff would seem really promising
 - - -
 ### Object Detection and Recognition
 http://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_feature2d/py_table_of_contents_feature2d/py_table_of_contents_feature2d.html
-
+[¹](http://docs.opencv.org/2.4/modules/imgproc/doc/structural_analysis_and_shape_descriptors.htm)[²](http://docs.opencv.org/3.0-beta/doc/py_tutorials/py_feature2d/py_matcher/py_matcher.html )[³](http://cs.stanford.edu/people/karpathy/convnetjs/demo/cifar10.html)
 ##Deep Learning
 lasagne.readthedocs.io/en/latest/
 
